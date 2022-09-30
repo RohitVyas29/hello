@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bulb</title>
+	<style> 
+img{
+	height:auto;
+	width:200px;
+}
+
+	</style>
+</head>
+<body>
+	<button type="submit" id="demo"  onclick="bulb()">switch</button> <br><br>
+	<img src="pic_bulbon.gif" id="onBulb" style="display:none;">
+	<img src="pic_bulboff.gif" id="offBulb" style="display:block;">
+
+<script> 
+function bulb() {
+  var x = document.getElementById("onBulb");
+  var y = document.getElementById("offBulb");
+  console.log(x, x.src);
+  if (x.style.display === "none" && y.style.display === "block") {
+    x.style.display = "block";
+    y.style.display = "none";
+  } else {
+     x.style.display = "none";
+     y.style.display = "block";
+  }
+
+}
+</script>
+
+</body>
+</html>
